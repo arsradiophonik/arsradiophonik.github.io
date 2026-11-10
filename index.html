@@ -1,231 +1,211 @@
 <!DOCTYPE html>
-<!-- arsradiophonik -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
 <title>Ars Radiophonik | Links</title>
 <script>document.documentElement.lang=/^(es|ja)/.test(navigator.language)?navigator.language.slice(0,2):'en'</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" href="JF-Dot-Kappa20-0213.ttf" as="font" type="font/ttf" crossorigin>
 <style>
-html { background: #060607; }
+@font-face {
+  font-family: "JF Dot Kappa 20";
+  src: url("JF-Dot-Kappa20-0213.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+html { background: #000; }
 body {
-  position: relative;
   margin: 0;
-  padding: 14px;
   min-height: 100vh;
+  min-height: 100dvh;
   box-sizing: border-box;
-  color: #e8ebee;
-  font: 400 1rem/1.55 "Chakra Petch", "Zen Kaku Gothic New", "Meiryo", "Yu Gothic", sans-serif;
+  padding: max(16px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  background-color: #000;
+    color: #fff;
+  font: 400 20px/24px "JF Dot Kappa 20", "MS Gothic", "Osaka-Mono", monospace;
+  font-synthesis: none;
+  -webkit-font-smoothing: none;
+  text-rendering: optimizeSpeed;
+  -webkit-text-size-adjust: 100%;
 }
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background:
-    radial-gradient(ellipse 80% 45% at 15% 0%, rgba(150, 160, 170, .22), transparent 70%),
-    radial-gradient(ellipse 70% 50% at 100% 25%, rgba(90, 100, 115, .28), transparent 70%),
-    radial-gradient(ellipse 90% 40% at 35% 100%, rgba(70, 80, 90, .25), transparent 70%),
-    #060607;
-}
-main {
-  max-width: 34rem;
-  margin: 0 auto;
-  padding: 12px;
-  background: rgba(18, 18, 20, .78);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, .28);
-  border-radius: 10px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, .8), 0 14px 44px rgba(0, 0, 0, .7), inset 0 1px 0 rgba(255, 255, 255, .3);
-}
+.wrap { max-width: 600px; margin: 0 auto; }
 html[lang="en"] span[lang]:not([lang="en"]),
 html[lang="es"] span[lang]:not([lang="es"]),
 html[lang="ja"] span[lang]:not([lang="ja"]) { display: none; }
-nav {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 10px;
-}
-details { position: relative; }
-summary {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 5px 9px;
-  border: 1px solid rgba(255, 255, 255, .3);
-  border-radius: 5px;
-  background: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .04) 50%, rgba(0, 0, 0, .15) 50%);
-  color: #d5dadf;
-  list-style: none;
-  cursor: pointer;
-  user-select: none;
-}
-summary::-webkit-details-marker { display: none; }
-summary::after { content: "\25BE"; font-size: .8rem; }
-summary:hover, details[open] > summary { border-color: rgba(255, 255, 255, .6); }
-summary:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
-menu {
-  position: absolute;
-  right: 0;
-  top: calc(100% + 6px);
-  min-width: 9.5rem;
-  margin: 0;
-  padding: 4px;
-  list-style: none;
-  background: rgba(22, 22, 24, .96);
-  border: 1px solid rgba(255, 255, 255, .3);
-  border-radius: 6px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .6);
-}
-menu button {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  padding: 7px 8px;
-  border: 0;
-  border-radius: 4px;
-  background: transparent;
-  color: inherit;
+
+.lang { display: flex; justify-content: flex-end; gap: 6px; }
+.lang button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 2px outset #fff;
+  border-radius: 0;
+  background: #000;
+  color: #fff;
   font: inherit;
-  text-align: left;
   cursor: pointer;
 }
-menu button:hover, menu button:focus-visible { background: rgba(255, 255, 255, .13); outline: none; }
-html[lang="en"] menu button[lang="en"],
-html[lang="es"] menu button[lang="es"],
-html[lang="ja"] menu button[lang="ja"] { background: rgba(255, 255, 255, .08); font-weight: 700; }
-summary::before, menu button::before {
-  content: "";
-  flex: none;
-  width: 1.5rem;
-  height: 1rem;
-  border: 1px solid rgba(255, 255, 255, .35);
-  background-size: cover;
-  background-position: center;
-}
-menu button[lang="en"]::before, html[lang="en"] summary::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='s'%3E%3Cpath d='M0,0 v30 h60 v-30 z'/%3E%3C/clipPath%3E%3CclipPath id='t'%3E%3Cpath d='M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23s)'%3E%3Cpath d='M0,0 v30 h60 v-30 z' fill='%23012169'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' clip-path='url(%23t)' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E"); }
-menu button[lang="es"]::before, html[lang="es"] summary::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect width='3' height='2' fill='%23aa151b'/%3E%3Crect y='.5' width='3' height='1' fill='%23f1bf00'/%3E%3C/svg%3E"); }
-menu button[lang="ja"]::before, html[lang="ja"] summary::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect width='3' height='2' fill='%23fff'/%3E%3Ccircle cx='1.5' cy='1' r='.6' fill='%23bc002d'/%3E%3C/svg%3E"); }
-header { padding: 22px 0 8px; text-align: center; }
+.lang button:active { border-style: inset; }
+.lang button:focus-visible { outline: 2px dotted #ffff55; outline-offset: 2px; }
+html[lang="en"] .lang [lang="en"],
+html[lang="es"] .lang [lang="es"],
+html[lang="ja"] .lang [lang="ja"] { border-style: inset; background: #fff; color: #000; }
+
+header { padding: 20px 0 4px; text-align: center; }
+.em { display: block; width: 128px; height: 128px; margin: 0 auto 14px; }
 h1 {
   margin: 0;
-  color: #fff;
-  font-family: "Arial Black", Arial, sans-serif;
-  font-size: clamp(1.2rem, 6vw, 2.2rem);
-  font-weight: 900;
-  line-height: 1.15;
-  letter-spacing: .03em;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  text-shadow: 0 0 16px rgba(255, 255, 255, .22), 0 2px 4px rgba(0, 0, 0, .7);
+  }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+header p { margin: 12px 0 0; color: #ff0; letter-spacing: 4px; }
+.bar { height: 8px; margin: 18px 0 0; background: #fff; }
+
+.win {
+  margin-top: 22px;
+  border: 4px double #fff;
+  background: #000;
+  clip-path: polygon(4px 0, calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px calc(100% - 4px), 0 calc(100% - 4px), 0 4px, 4px 4px);
 }
-h2 {
-  margin: 18px 0 0;
-  padding: 5px 10px;
-  border: 1px solid rgba(255, 255, 255, .28);
-  border-bottom: 0;
-  border-radius: 6px 6px 0 0;
-  background:
-    linear-gradient(rgba(255, 255, 255, .22), rgba(255, 255, 255, .05) 50%, rgba(0, 0, 0, .18) 50%, rgba(0, 0, 0, .06)),
-    #3a3d43;
+.win h2 {
+  margin: 0;
+  padding: 2px 10px;
+  background: #fff;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 2px;
+}
+.win ul { margin: 0; padding: 4px 0; list-style: none; }
+.win li + li { border-top: 2px solid #fff; }
+.win a {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  min-height: 52px;
+  padding: 6px 12px 6px 38px;
   color: #fff;
-  font-size: .95rem;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: .03em;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
+  text-decoration: none;
 }
-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, .18);
-  border-top: 0;
-  border-radius: 0 0 6px 6px;
+.win a:visited { color: #fff; }
+.win a::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 12px;
+  height: 21px;
+  margin-top: -10px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 7' shape-rendering='crispEdges'%3E%3Cpath fill='%23ffff55' d='M0 0H1V1H2V2H3V3H4V4H3V5H2V6H1V7H0Z'/%3E%3C/svg%3E") no-repeat;
+  background-size: 100% 100%;
+  image-rendering: pixelated;
+  visibility: hidden;
 }
-th, td {
-  padding: 7px 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, .09);
-  vertical-align: top;
-  text-align: left;
+.win a:hover, .win a:focus-visible { background: #800080; color: #fff; outline: none; }
+.win a:focus-visible { outline: 2px dotted #fff; outline-offset: -4px; }
+.win a:hover::before, .win a:focus-visible::before { visibility: visible; animation: bob .5s steps(1) infinite; }
+@keyframes bob { 50% { left: 16px; } }
+@keyframes blink { 50% { visibility: hidden; } }
+.n { display: flex; flex-wrap: wrap; align-items: center; gap: 0 10px; }
+.t { padding: 0 6px; background: #ff0; color: #000; font-style: normal; }
+.h { overflow: hidden; color: #0ff; text-overflow: ellipsis; white-space: nowrap; }
+@media (min-width: 560px) {
+  .win a { grid-template-columns: minmax(0, 1fr) auto; column-gap: 16px; }
+  .h { text-align: right; }
 }
-tr:last-child > th, tr:last-child > td { border-bottom: 0; }
-th {
-  width: 7.2rem;
-  border-right: 1px solid rgba(255, 255, 255, .09);
-  background: rgba(255, 255, 255, .06);
-  color: #d5dadf;
-  font-size: .9rem;
-  font-weight: 600;
+
+.msg {
+  position: relative;
+  margin-top: 22px;
+  padding: 8px 40px 8px 14px;
+  border: 4px double #fff;
+  background: #000;
+  color: #fff;
 }
-td { background: rgba(0, 0, 0, .3); overflow-wrap: anywhere; }
-small { display: block; color: #aab2b9; font-size: .82rem; line-height: 1.7; }
-a { color: #9fd0f5; text-decoration-color: rgba(159, 208, 245, .5); }
-a:visited { color: #bfb3d9; }
-a:hover, a:focus-visible { color: #fff; text-shadow: 0 0 8px rgba(255, 255, 255, .7); }
-footer {
-  margin-top: 18px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, .18);
-  color: #8d959c;
-  text-align: center;
-  font-size: .82rem;
+.msg p { margin: 0; }
+.msg::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 14px;
+  height: 8px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 4' shape-rendering='crispEdges'%3E%3Cpath fill='%23ffff55' d='M0 0H7V1H6V2H5V3H4V4H3V3H2V2H1V1H0Z'/%3E%3C/svg%3E") no-repeat;
+  background-size: 100% 100%;
+  animation: blink 1s steps(1) infinite;
 }
-footer p { margin: 4px 0; }
+@media (min-width: 560px) {
+  h1 { font-size: 60px; line-height: 68px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; }
+}
 </style>
 </head>
 <body>
-<main>
+<div class="wrap">
 
-<nav>
-<details>
-<summary aria-label="Language / Idioma / 言語" title="Language / Idioma / 言語"></summary>
-<menu>
-<li><button type="button" lang="en" onclick="document.documentElement.lang=this.lang;this.closest('details').open=false">English</button></li>
-<li><button type="button" lang="es" onclick="document.documentElement.lang=this.lang;this.closest('details').open=false">Español</button></li>
-<li><button type="button" lang="ja" onclick="document.documentElement.lang=this.lang;this.closest('details').open=false">日本語</button></li>
-</menu>
-</details>
+<nav class="lang" aria-label="Language / Idioma / 言語">
+<button type="button" lang="en" onclick="document.documentElement.lang=this.lang">English</button>
+<button type="button" lang="es" onclick="document.documentElement.lang=this.lang">Español</button>
+<button type="button" lang="ja" onclick="document.documentElement.lang=this.lang">日本語</button>
 </nav>
 
 <header>
-<h1>Ars Radiophonik</h1>
+<svg class="em" viewBox="0 0 64 64" fill="none" stroke="#f00" shape-rendering="crispEdges" aria-hidden="true">
+<circle cx="32" cy="32" r="30"/>
+<polygon points="32,60 48.5,9.3 5.4,40.6 58.6,40.6 15.5,9.3"/>
+</svg>
+<h1 class="sr">Ars Radiophonik</h1>
+<p>アルス・ラジオフォニック</p>
+<div class="bar" aria-hidden="true"></div>
 </header>
 
-<section>
+<section class="win">
 <h2><span lang="en">Links</span><span lang="es">Enlaces</span><span lang="ja">リンク</span></h2>
-<table>
-<tr><th><span lang="en">Software</span><span lang="es">Software</span><span lang="ja">ソフトウェア</span></th><td><a href="https://arsradiophonik.itch.io/">arsradiophonik.itch.io</a></td></tr>
-<tr><th>GitHub</th><td><a href="https://github.com/arsradiophonik">github.com/arsradiophonik</a></td></tr>
-<tr><th>Blog</th><td><a href="https://arsradiophonik.blogspot.com/">arsradiophonik.blogspot.com</a></td></tr>
-<tr><th rowspan="2">YouTube</th><td><a href="https://www.youtube.com/@arsradiophonik">@arsradiophonik</a><small><span lang="en">Archive</span><span lang="es">Archivo</span><span lang="ja">アーカイブ</span></small></td></tr>
-<tr><td><a href="https://www.youtube.com/@_ArsRadiophonik_">@_ArsRadiophonik_</a><small><span lang="en">Games &amp; Dev</span><span lang="es">Juegos y desarrollo</span><span lang="ja">ゲーム・開発</span></small></td></tr>
-<tr><th>Steam</th><td><a href="https://steamcommunity.com/id/arsradiophonik/">steamcommunity.com/id/arsradiophonik</a></td></tr>
-<tr><th>Pixiv</th><td><a href="https://www.pixiv.net/en/users/111594468">pixiv.net/users/111594468</a></td></tr>
-<tr><th>Instagram</th><td><a href="https://www.instagram.com/ars.radiophonik/">@ars.radiophonik</a></td></tr>
-<tr><th>Facebook</th><td><a href="https://www.facebook.com/ArsRadiophonikMX">ArsRadiophonikMX</a></td></tr>
-</table>
+<ul>
+<li><a href="https://arsradiophonik.itch.io/"><span class="n"><span lang="en">Software</span><span lang="es">Software</span><span lang="ja">ソフトウェア</span></span><span class="h">arsradiophonik.itch.io</span></a></li>
+<li><a href="https://github.com/arsradiophonik"><span class="n">GitHub</span><span class="h">github.com/arsradiophonik</span></a></li>
+<li><a href="https://arsradiophonik.blogspot.com/"><span class="n">Blog</span><span class="h">arsradiophonik.blogspot.com</span></a></li>
+<li><a href="https://www.youtube.com/@arsradiophonik"><span class="n">YouTube<i class="t"><span lang="en">Archive</span><span lang="es">Archivo</span><span lang="ja">アーカイブ</span></i></span><span class="h">@arsradiophonik</span></a></li>
+<li><a href="https://www.youtube.com/@_ArsRadiophonik_"><span class="n">YouTube<i class="t"><span lang="en">Games &amp; Dev</span><span lang="es">Juegos y desarrollo</span><span lang="ja">ゲーム・開発</span></i></span><span class="h">@_ArsRadiophonik_</span></a></li>
+<li><a href="https://steamcommunity.com/id/arsradiophonik/"><span class="n">Steam</span><span class="h">steamcommunity.com/id/arsradiophonik</span></a></li>
+<li><a href="https://www.pixiv.net/en/users/111594468"><span class="n">Pixiv</span><span class="h">pixiv.net/users/111594468</span></a></li>
+<li><a href="https://www.instagram.com/ars.radiophonik/"><span class="n">Instagram</span><span class="h">@ars.radiophonik</span></a></li>
+<li><a href="https://www.facebook.com/ArsRadiophonikMX"><span class="n">Facebook</span><span class="h">ArsRadiophonikMX</span></a></li>
+</ul>
 </section>
 
-<section>
+<section class="win">
 <h2><span lang="en">Contact</span><span lang="es">Contacto</span><span lang="ja">連絡先</span></h2>
-<table>
-<tr><th><span lang="en">E-mail</span><span lang="es">Correo</span><span lang="ja">メール</span></th><td><a href="mailto:jp.arusu.94@gmail.com">jp.arusu.94@gmail.com</a></td></tr>
-</table>
+<ul>
+<li><a href="mailto:jp.arusu.94@gmail.com"><span class="n"><span lang="en">E-mail</span><span lang="es">Correo</span><span lang="ja">メール</span></span><span class="h">jp.arusu.94@gmail.com</span></a></li>
+</ul>
 </section>
 
-<footer>
+<footer class="msg">
 <p><span lang="en">Last updated</span><span lang="es">Actualizado</span><span lang="ja">最終更新</span>: 2026-11-10</p>
 </footer>
 
-</main>
+</div>
+
+<script>
+const L=[...document.querySelectorAll('.win a')];
+document.addEventListener('keydown',e=>{
+  if(e.key!=='ArrowDown'&&e.key!=='ArrowUp')return;
+  e.preventDefault();
+  const i=L.indexOf(document.activeElement);
+  const n=e.key==='ArrowDown'?(i+1)%L.length:(i<=0?L.length-1:i-1);
+  L[n].focus();
+});
+</script>
 </body>
 </html>
