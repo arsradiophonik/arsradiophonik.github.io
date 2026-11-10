@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- arsradiophonik -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Ars Radiophonik | Links</title>
+<script>document.documentElement.lang=/^(es|ja)/.test(navigator.language)?navigator.language.slice(0,2):'en'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+html { background: #060607; }
+body {
+  position: relative;
+  margin: 0;
+  padding: 14px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: #e8ebee;
+  font: 400 1rem/1.55 "Chakra Petch", "Zen Kaku Gothic New", "Meiryo", "Yu Gothic", sans-serif;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 45% at 15% 0%, rgba(150, 160, 170, .22), transparent 70%),
+    radial-gradient(ellipse 70% 50% at 100% 25%, rgba(90, 100, 115, .28), transparent 70%),
+    radial-gradient(ellipse 90% 40% at 35% 100%, rgba(70, 80, 90, .25), transparent 70%),
+    #060607;
+}
+main {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 12px;
+  background: rgba(18, 18, 20, .78);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .8), 0 14px 44px rgba(0, 0, 0, .7), inset 0 1px 0 rgba(255, 255, 255, .3);
+}
+html[lang="en"] span[lang]:not([lang="en"]),
+html[lang="es"] span[lang]:not([lang="es"]),
+html[lang="ja"] span[lang]:not([lang="ja"]) { display: none; }
+nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+details { position: relative; }
+summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 5px;
+  background: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .04) 50%, rgba(0, 0, 0, .15) 50%);
+  color: #d5dadf;
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "\25BE"; font-size: .8rem; }
+summary:hover, details[open] > summary { border-color: rgba(255, 255, 255, .6); }
+summary:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  min-width: 9.5rem;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  background: rgba(22, 22, 24, .96);
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .6);
+}
+menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 7px 8px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+menu button:hover, menu button:focus-visible { background: rgba(255, 255, 255, .13); outline: none; }
+html[lang="en"] menu button[lang="en"],
+html[lang="es"] menu button[lang="es"],
+html[lang="ja"] menu button[lang="ja"] { background: rgba(255, 255, 255, .08); font-weight: 700; }
+summary::before, menu button::before {
+  content: "";
+  flex: none;
+  width: 1.5rem;
+  height: 1rem;
+  border: 1px solid rgba(255, 255, 255, .35);
+  background-size: cover;
+  background-position: center;
+}
+menu button[lang="en"]::before, html[lang="en"] summary::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='s'%3E%3Cpath d='M0,0 v30 h60 v-30 z'/%3E%3C/clipPath%3E%3CclipPath id='t'%3E%3Cpath d='M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23s)'%3E%3Cpath d='M0,0 v30 h60 v-30 z' fill='%23012169'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' clip-path='url(%23t)' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E"); }
+menu button[lang="es"]::before, html[lang="es"] summary::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect width='3' height='2' fill='%23aa151b'/%3E%3Crect y='.5' width='3' height='1' fill='%23f1bf00'/%3E%3C/svg%3E"); }
+menu button[lang="ja"]::before, html[lang="ja"] summary::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect width='3' height='2' fill='%23fff'/%3E%3Ccircle cx='1.5' cy='1' r='.6' fill='%23bc002d'/%3E%3C/svg%3E"); }
+header { padding: 22px 0 8px; text-align: center; }
+h1 {
+  margin: 0;
+  color: #fff;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: clamp(1.2rem, 6vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  text-shadow: 0 0 16px rgba(255, 255, 255, .22), 0 2px 4px rgba(0, 0, 0, .7);
+}
+h2 {
+  margin: 18px 0 0;
+  padding: 5px 10px;
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-bottom: 0;
+  border-radius: 6px 6px 0 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, .22), rgba(255, 255, 255, .05) 50%, rgba(0, 0, 0, .18) 50%, rgba(0, 0, 0, .06)),
+    #3a3d43;
+  color: #fff;
+  font-size: .95rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .03em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+}
+th, td {
+  padding: 7px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, .09);
+  vertical-align: top;
+  text-align: left;
+}
+tr:last-child > th, tr:last-child > td { border-bottom: 0; }
+th {
+  width: 7.2rem;
+  border-right: 1px solid rgba(255, 255, 255, .09);
+  background: rgba(255, 255, 255, .06);
+  color: #d5dadf;
+  font-size: .9rem;
+  font-weight: 600;
+}
+td { background: rgba(0, 0, 0, .3); overflow-wrap: anywhere; }
+small { display: block; color: #aab2b9; font-size: .82rem; line-height: 1.7; }
+a { color: #9fd0f5; text-decoration-color: rgba(159, 208, 245, .5); }
+a:visited { color: #bfb3d9; }
+a:hover, a:focus-visible { color: #fff; text-shadow: 0 0 8px rgba(255, 255, 255, .7); }
+footer {
+  margin-top: 18px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, .18);
+  color: #8d959c;
+  text-align: center;
+  font-size: .82rem;
+}
+footer p { margin: 4px 0; }
+</style>
+</head>
+<body>
+<main>
+
+<nav>
+<details>
+<summary aria-label="Language / Idioma / 言語" title="Language / Idioma / 言語"></summary>
+<menu>
+<li><button type="button" lang="en" onclick="document.documentElement.lang=this.lang;this.closest('details').open=false">English</button></li>
+<li><button type="button" lang="es" onclick="document.documentElement.lang=this.lang;this.closest('details').open=false">Español</button></li>
+<li><button type="button" lang="ja" onclick="document.documentElement.lang=this.lang;this.closest('details').open=false">日本語</button></li>
+</menu>
+</details>
+</nav>
+
+<header>
+<h1>Ars Radiophonik</h1>
+</header>
+
+<section>
+<h2><span lang="en">Links</span><span lang="es">Enlaces</span><span lang="ja">リンク</span></h2>
+<table>
+<tr><th><span lang="en">Software</span><span lang="es">Software</span><span lang="ja">ソフトウェア</span></th><td><a href="https://arsradiophonik.itch.io/">arsradiophonik.itch.io</a></td></tr>
+<tr><th>GitHub</th><td><a href="https://github.com/arsradiophonik">github.com/arsradiophonik</a></td></tr>
+<tr><th>Blog</th><td><a href="https://arsradiophonik.blogspot.com/">arsradiophonik.blogspot.com</a></td></tr>
+<tr><th rowspan="2">YouTube</th><td><a href="https://www.youtube.com/@arsradiophonik">@arsradiophonik</a><small><span lang="en">Archive</span><span lang="es">Archivo</span><span lang="ja">アーカイブ</span></small></td></tr>
+<tr><td><a href="https://www.youtube.com/@_ArsRadiophonik_">@_ArsRadiophonik_</a><small><span lang="en">Games &amp; Dev</span><span lang="es">Juegos y desarrollo</span><span lang="ja">ゲーム・開発</span></small></td></tr>
+<tr><th>Steam</th><td><a href="https://steamcommunity.com/id/arsradiophonik/">steamcommunity.com/id/arsradiophonik</a></td></tr>
+<tr><th>Pixiv</th><td><a href="https://www.pixiv.net/en/users/111594468">pixiv.net/users/111594468</a></td></tr>
+<tr><th>Instagram</th><td><a href="https://www.instagram.com/ars.radiophonik/">@ars.radiophonik</a></td></tr>
+<tr><th>Facebook</th><td><a href="https://www.facebook.com/ArsRadiophonikMX">ArsRadiophonikMX</a></td></tr>
+</table>
+</section>
+
+<section>
+<h2><span lang="en">Contact</span><span lang="es">Contacto</span><span lang="ja">連絡先</span></h2>
+<table>
+<tr><th><span lang="en">E-mail</span><span lang="es">Correo</span><span lang="ja">メール</span></th><td><a href="mailto:jp.arusu.94@gmail.com">jp.arusu.94@gmail.com</a></td></tr>
+</table>
+</section>
+
+<footer>
+<p><span lang="en">Last updated</span><span lang="es">Actualizado</span><span lang="ja">最終更新</span>: 2026-11-10</p>
+</footer>
+
+</main>
+</body>
+</html>
