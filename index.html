@@ -53,6 +53,23 @@ html[lang="en"] .lang [lang="en"],
 html[lang="es"] .lang [lang="es"],
 html[lang="ja"] .lang [lang="ja"] { border-style: inset; background: #fff; color: #000; }
 
+
+.ticker {
+  margin-top: 12px;
+  overflow: hidden;
+  border: 2px solid #fff;
+  background: #000;
+  color: #ff0;
+  white-space: nowrap;
+}
+.ticker .track { display: flex; width: max-content; animation: scroll 18s linear infinite; }
+.ticker .item { min-width: 600px; padding: 4px 0 4px 40px; }
+.ticker a { color: #0ff; text-decoration: underline; }
+.ticker a:visited { color: #0ff; }
+.ticker a:hover, .ticker a:focus-visible { background: #800080; color: #fff; outline: none; }
+.ticker:hover .track, .ticker:focus-within .track { animation-play-state: paused; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+
 header { padding: 20px 0 4px; text-align: center; }
 .em { display: block; width: 128px; height: 128px; margin: 0 auto 14px; }
 h1 {
@@ -146,7 +163,7 @@ header p { margin: 12px 0 0; color: #ff0; letter-spacing: 4px; }
   h1 { font-size: 60px; line-height: 68px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; }
+  *:not(.track), *::before, *::after { animation: none !important; }
 }
 </style>
 </head>
@@ -158,6 +175,8 @@ header p { margin: 12px 0 0; color: #ff0; letter-spacing: 4px; }
 <button type="button" lang="es" onclick="document.documentElement.lang=this.lang">Español</button>
 <button type="button" lang="ja" onclick="document.documentElement.lang=this.lang">日本語</button>
 </nav>
+
+<div class="ticker" role="region" aria-label="News"><div class="track"><span class="item"><span lang="en">≫ <a href="https://arsradiophonik.itch.io/kmlink">KMLink</a> is now available on itch.io. ≫ Free, minimalist video editor in development.</span><span lang="es">≫ <a href="https://arsradiophonik.itch.io/kmlink">KMLink</a> ya está disponible en itch.io. ≫ Editor de video gratuito y minimalista en desarrollo.</span><span lang="ja">≫ <a tabindex="-1" href="https://arsradiophonik.itch.io/kmlink">KMLink</a>をitch.ioで公開しました。 ≫ 無料のシンプルな動画編集ソフトを開発中。</span></span><span class="item" aria-hidden="true"><span lang="en">≫ <a tabindex="-1" href="https://arsradiophonik.itch.io/kmlink">KMLink</a> is now available on itch.io. ≫ Free, minimalist video editor in development.</span><span lang="es">≫ <a tabindex="-1" href="https://arsradiophonik.itch.io/kmlink">KMLink</a> ya está disponible en itch.io. ≫ Editor de video gratuito y minimalista en desarrollo.</span><span lang="ja">≫ <a tabindex="-1" href="https://arsradiophonik.itch.io/kmlink">KMLink</a>をitch.ioで公開しました。 ≫ 無料のシンプルな動画編集ソフトを開発中。</span></span></div></div>
 
 <header>
 <svg class="em" viewBox="0 0 64 64" fill="none" stroke="#f00" shape-rendering="crispEdges" aria-hidden="true">
